@@ -1,0 +1,11 @@
+A long time ago J2EE and, especially, application servers were considered to be too bloated and "heavyweight." It could be quite tedious and discouraging for developers to use that technology for developing applications. But since the name of the J2EE framework changed to Java EE, that assumption is not true anymore. How does Java EE compare to other enterprise frameworks and what criteria makes a framework lightweight?
+
+ 
+
+When choosing a technology, one of the most important aspects to consider is the developers' productivity during the development process. Engineers should spend as much time as possible implementing use cases and revenue-generating features, because this is what will move a company towards its goals.
+
+ 
+
+The chosen technology and methods should minimize the time developers spend waiting for builds, tests, and deployments; configuring applications; implementing plumbing that is not relevant for business use cases; and configuring the build environment and the external dependencies. But the majority of available technologies do not do this.
+
+ 
