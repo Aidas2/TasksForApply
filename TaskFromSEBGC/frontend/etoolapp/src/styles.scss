@@ -1,0 +1,91 @@
+.heading {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.field {
+  align-items: baseline;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  .field-title {
+    text-align:start;
+    margin-right: 1em;
+  }
+}
+
+  /*  MEDIA QUERIES (aka responsive css demo) */
+
+  /* Small Screen */
+  @media screen and (min-width: 320px){
+
+    .main-container {
+      margin: 1em;
+      padding: 1em;
+      background-color:lightcoral;
+      border-radius: 1em;
+    }
+
+  }
+
+  /* Medium size Screen devices */
+  @media screen and (min-width: 568px){
+
+    .main-container {
+      margin: 3em;
+      padding: 3em;
+      background-color:lightblue;
+      border-radius: 3em;
+    }
+  }
+
+  /* Large size Screen devices */
+  @media screen and (min-width: 768px){
+
+    .main-container {
+      margin: 4em;
+      padding: 4em;
+      background-color:lightgreen;
+      border-radius: 4em;
+    }
+
+  }
+
+  /* Larger size Screen devices */
+  @media screen and (min-width: 1024px){
+
+    .main-container {
+      margin: 5em;
+      padding: 5em;
+      background-color:lightgrey;
+      border-radius: 5em;
+    }
+
+  }
+
+  // change text color depending on product title
+  .zero {
+    color: blueviolet;
+  }
+  .one {
+    color: lightcoral;
+  }
+  .two {
+    color: blue;
+  }
+  .three {
+    color: orange;
+  }
+  .four {
+    color: hotpink;
+  }
+  .five {
+    color: mediumaquamarine;
+  }
+  .six {
+    color: red;
+  }
+  .seven {
+    color: gold;
+  }

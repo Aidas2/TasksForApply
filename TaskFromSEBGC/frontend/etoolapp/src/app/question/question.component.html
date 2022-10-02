@@ -1,0 +1,66 @@
+<div class="main-container">
+  <span class="heading">{{'Questions:'}}</span>
+  <form [formGroup]="questionForm" class="form" *ngIf="questionForm">
+    <div>
+      <div class="field">
+        <span class="field-title">{{'Select your age range:'}}</span>
+        <select class="form-select" formControlName="ageRange">
+          <option *ngFor="let answer of answersToAge" [value]="answer.description">{{answer.description}}</option>
+        </select>
+      </div>
+      <div class="field">
+        <span class="field-title">{{'Are you a student?'}}</span>
+        <select class="form-select" formControlName="isStudent">
+          <option [value]=true>Yes</option>
+          <option [value]=false>No</option>
+        </select>
+      </div>
+      <div class="field">
+        <span class="field-title">{{'Select your income range:'}}</span>
+        <select class="form-select" formControlName="incomeRange">
+          <option *ngFor="let answer of answersToIncome" [value]="answer.description">{{answer.description}}</option>
+        </select>
+      </div>
+      <button type="button" class="btn btn-primary" (click)="findRecommendedProduct()">
+        {{'Find recommended product'}}
+      </button>
+    </div>
+  </form>
+
+  <div>{{'Recommended product/-s: '}}</div>
+  <div *ngIf="recommendedProducts && recommendedProducts.length > 0; else noRecommendation">
+    <div *ngFor="let product of recommendedProducts" class="heading"
+    [ngClass] = "{
+      'zero': (product.title === products[0].title),
+      'one': (product.title === products[1].title),
+      'two': (product.title === products[2].title),
+      'three': (product.title === products[3].title),
+      'four': (product.title === products[4].title),
+      'five': (product.title === products[5].title),
+      'six': (product.title === products[6].title),
+      'seven': (product.title === products[7].title)}">
+      {{product.title}}
+    </div>
+  </div>
+  <ng-template #noRecommendation>
+    <div>There is no recommendation</div>
+  </ng-template>
+  <hr>
+  <div *ngIf="products">
+    <div class="heading">Possible products:</div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let product of products">
+        <tr>
+          <td>{{product.title}}</td>
+          <td>{{product.description}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
